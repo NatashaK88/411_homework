@@ -1,0 +1,178 @@
+p{
+  font-size: 20px;
+}
+
+div {
+    background-color: #00afb5;
+    border: 5px black solid;
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px;
+    text-align: center;
+    font-family: Quicksand;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+body {
+    background-color: #efd28d;
+    font-family: comic sans ms;
+}
+a{
+  color: #a30000;
+}
+
+ul{
+  display: table;
+  margin: 0 auto;
+  font-size: 20px;
+}
+
+table{
+  display: table;
+  margin: 0 auto;
+}
+
+#title{
+  font-size: 25px;
+}
+
+*{
+ box-sizing: border-box;
+
+}
+
+
+@media only screen and (max-with: 768px)
+
+div > img {
+ max-width: 100%;
+}
+}
+/* Menu */
+header {
+    position: fixed;
+    top: 0px;
+    background-color: black;
+    margin-top: 0;
+    height: 4em;
+    width: 99%;
+    text-align: right;
+    font-family: Quicksand;
+    padding-right: 3em;
+}
+
+/* Set the layout of the menu: */
+.menu-item {
+    display: inline-block;
+    margin: 1em .2em;
+    min-width: 6em;
+    text-align: center;
+    background-color: #333;
+    padding: 0.5em 1em;
+    border-radius: 1em;
+}
+
+.site-name {
+    color: #a30000;
+    margin: 1em .2em;
+    min-width: 6em;
+    padding: 0.5em 1em;
+    border-radius: 1em;
+    letter-spacing: 0.3em;
+    float: left;
+    font-weight: bold;
+    background-color:black;
+}
+
+/* Style the links: */
+.menu-item a {
+    color: #a30000;
+    text-decoration: none;
+}
+/*
+.menu-item:hover {
+    background-color: #004777;
+    color: #333;
+}
+*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: #ff7700;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: #a30000;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ff7700;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #a30000;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* photo gallery */
+* {
+    box-sizing: border-box
+}
+
+.image-slideshow {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+img {
+  width: 100%
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
