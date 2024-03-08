@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+  #myContainer {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    background: yellow;
+    overflow: hidden;
+  }
+
+  #myAnimation {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background-color: red;
+    transition: opacity 1s ease-out;
+  }
+
+  #myShape {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 43.3px solid purple;
+    opacity: 0;
+    transition: opacity 1s ease-in, top 0.5s ease-out, left 0.5s ease-out;
+  }
+</style>
+
+<body>
+
+  <p>
+    <button onclick="myMove()">Click Me</button>
+  </p>
+
+  <div id="myContainer">
+    <div id="myAnimation"></div>
+    <div id="myShape"></div>
+  </div>
+
+  <script>
+    function myMove() {
+      var animation = document.getElementById("myAnimation");
+      var shape = document.getElementById("myShape");
+
+      // Move the red square
+      moveSquare(animation, function () {
+        // Fade out animation
+        setTimeout(function () {
+          animation.style.opacity = 0;
+          // Trigger the fade and shape animation after moving the square
+          moveAndFade(shape);
+        }, 1000); // Wait for 1 second before fading out
+      });
+    }
+
+    function moveSquare(element, callback) {
+      var posX = 0;
+      var posY = 0;
+      var directionX = 1;
+      var directionY = 1;
+
+      var moveId = setInterval(moveFrame, 10);
+
+      function moveFrame() {
+        posX += directionX * 2;
+        posY += directionY * 2;
+
+        element.style.left = posX + 'px';
+        element.style.top = posY + 'px';
+
+        if (posX >= 350 || posX <= 0 || posY >= 350 || posY <= 0) {
+          directionX *= -1; // Reverse direction horizontally
+          directionY *= -1; // Reverse direction vertically
+        }
+      }
+      setTimeout(function () {
+        clearInterval(moveId);
+        callback();
+      }, 5000); // Stop after 5 seconds
+    }
+
+    function moveAndFade(element) {
+      var posX = 0;
+      var posY = 0;
+      var directionX = 1;
+      var directionY = 1;
+
+      element.style.opacity = 1; // Make sure the shape is visible before moving
+
+      var moveId = setInterval(moveFrame, 10);
+
+      function moveFrame() {
+        posX += directionX * 2;
+        posY += directionY * 2;
+
+        element.style.left = posX + 'px';
+        element.style.top = posY + 'px';
+
+        if (posX >= 350 || posX <= 0 || posY >= 350 || posY <= 0) {
+          directionX *= -1; // Reverse direction horizontally
+          directionY *= -1; // Reverse direction vertically
+        }
+
+        if (posX >= 350) {
+          clearInterval(moveId);
+          // Fade out shape after moving
+          element.style.opacity = 0;
+        }
+      }
+    }
+  </script>
+
+  <a href="index.html">Home</a>
+</body>
+
+</html>

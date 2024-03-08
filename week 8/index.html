@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+      <meta name="Art Projects" content="Art Projects">
+      <meta name="author" content="Natasha Kanning">
+       <meta name="viewport" content="width=device-
+       width, initial-scale=1.0">
+    <title>Kanning Crafts</title>
+
+<link rel="stylesheet" type="text/css" href="./css/style.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("p").hide();
+  });
+});
+</script>
+  <body>
+
+    <header>
+      <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="denver2023.html">Denver 2023</a></li>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn">School</a>
+      <div class="dropdown-content">
+        <a href="3Dannimation.html">3D Animation</a>
+        <a href="drawing.html">Drawing</a>
+        <a href="photoshop.html">Photoshop</a>
+        <a href="photography.html">Photography</a>
+        <a href="filmediting.html">Film Editing</a>
+        <a href="441.html">JavaScript</a>
+        <a href="4411.html">JavaScript 2</a>
+      </div>
+    </li>
+  </ul>
+
+
+        </header>
+        <style>
+        body {
+      background-image: url('images/green.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+          h1 {
+            font-weight: bold;
+          }
+        </style>
+
+    <br />
+        <br />
+    <div>
+
+
+<h1><strong><em>Natasha Kanning's School Projects</em></strong></h1>
+</div>
+<br />
+    <br />
+      <div>
+
+<p>
+<img src="images/bruce_natasha_kanning.jpg" alt="bruce" style="width: 600px;" >
+  <br />
+  This is a spot where I can put all my school Projects in one place and easily show them off.</p>
+
+</div>
+
+  <br />
+      <br />
+
+      <div>
+
+
+      <h1>My Classes</h1>
+
+      <ol>
+      <li>Creative Coding</li>
+        <br />
+      <li>History of Media Arts</li>
+        <br />
+      <li>Photoshop</li>
+        <br />
+      <li>Javascript</li>
+  </ol>
+
+      </div>
+      <br />
+          <br />
+          <div id="quote-container">
+            <p id="quote"></p>
+          </div>
+<div>
+
+
+          <script>
+            document.addEventListener('DOMContentLoaded', function () {
+              var quotes = [
+                "When nothing goes right, go left.",
+                "The only way to do great work is to love what you do.",
+                "Why fit in when you were born to stand out.",
+                "Remember that your mental health is a priority, your inner peace is essential, and your self-care is a necessity.",
+                "If I could say it in words, there would be no reason to paint."
+              ];
+
+              var quoteContainer = document.getElementById('quote');
+              var currentIndex = 0;
+
+              function displayQuote() {
+                quoteContainer.textContent = quotes[currentIndex];
+              }
+
+              function nextQuote() {
+                currentIndex = (currentIndex + 1) % quotes.length;
+                displayQuote();
+              }
+
+              // Initial display
+              displayQuote();
+
+              // Change quote every 5 seconds
+              setInterval(nextQuote, 5000);
+            });
+          </script>
+          </div>
+          <br />
+              <br />
+        <div>
+<h1>Should I take a guitar class next semester?</h1>
+          <form>
+                 <label>
+                     <input type="radio" name="decision" value="yes" required> Yes
+                 </label>
+                 <label>
+                     <input type="radio" name="decision" value="no" required> No
+                 </label>
+                 <input type="submit" value="Submit">
+             </form>
+             </div>
+
+             <br />
+                 <br />
+
+  <div><iframe src="https://calendar.google.com/calendar/embed?src=295344728f0f5a210d9843ef8c939f6d398ee201a1e62e86a11936caccab4d02%40group.calendar.google.com&ctz=America%2FDenver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe></div>
+                     <br />
+                         <br />
+
+
+        <div>
+
+          <a href="#" style="font-size: 24px; font-weight: bold;">Back to Top</a>
+
+</div>
+
+
+  </body>
+</html>

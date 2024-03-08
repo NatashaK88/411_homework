@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .shape {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #3498db;
+            border-radius: 50%;
+        }
+
+        #cat-container {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 999;
+        }
+
+        #cat-image {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Shapes -->
+    <div id="shape-container"></div>
+
+    <!-- Cat Image -->
+    <div id="cat-container">
+        <img id="cat-image" src="" alt="Random Cat">
+    </div>
+
+    <script>
+        // Create shapes
+        function createShape() {
+            const shape = document.createElement('div');
+            shape.className = 'shape';
+            document.getElementById('shape-container').appendChild(shape);
+            return shape;
+        }
+
+        // Move shapes randomly
+        function moveShapes() {
+            const shapes = document.querySelectorAll('.shape');
+
+            shapes.forEach(shape => {
+                const maxX = window.innerWidth - shape.clientWidth;
+                const maxY = window.innerHeight - shape.clientHeight;
+
+                const randomX = Math.floor(Math.random() * maxX);
+                const randomY = Math.floor(Math.random() * maxY);
+
+                shape.style.left = `${randomX}px`;
+                shape.style.top = `${randomY}px`;
+            });
+        }
+
+        // Display local cat image
+        function displayCat() {
+            const catContainer = document.getElementById('cat-container');
+            const catImage = document.getElementById('cat-image');
+            catImage.src = 'images/cats.jpg'; // Local cat image
+            catContainer.style.display = 'block';
+        }
+
+        // Create shapes
+        for (let i = 0; i < 5; i++) {
+            createShape();
+        }
+
+        // Move shapes every 3 seconds
+        setInterval(moveShapes, 3000);
+
+        // Show local cat image after 7 seconds
+        setInterval(displayCat, 7000);
+    </script>
+
+  <a href="index.html">Home</a>
+</body>
+
+</html>
