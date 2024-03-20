@@ -1,0 +1,23 @@
+/* styles.css */
+
+body {
+    background-image: url('images/vines.jpg'); /* Adjusted path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#pokemonInfo {
+    text-align: center;
+    color: #222;
+}
+
+#pokemonInfo p {
+    font-weight: bold;
+    text-decoration: underline;
+    color: red;
+}
