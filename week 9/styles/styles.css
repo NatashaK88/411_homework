@@ -1,0 +1,35 @@
+body {
+    background-image: none;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+
+#pokemonInfo {
+    text-align: center;
+    color: #222;
+}
+
+#pokemonInfo p {
+    font-weight: bold;
+    text-decoration: underline;
+    color: white;
+}
+#fetchDataBtn {
+					background-color: red;
+					color: white;
+					border: none;
+					padding: 10px 20px;
+					cursor: pointer;
+					font-size: 16px;
+					border-radius: 5px;
+			}
+
+			#fetchDataBtn:hover {
+					background-color: darkred;
+			}
