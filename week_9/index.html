@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PokeAPI Data</title>
-     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
@@ -29,6 +29,10 @@
                         <p>Forms: ${data.forms.map(form => form.name).join(', ')}</p>
                         <p>Moves: ${data.moves.map(move => move.move.name).join(', ')}</p>
                         <p>Species: ${data.species.name}</p>
+                        <p>Types: ${data.types.map(type => type.type.name).join(', ')}</p>
+                        <p>Stats: ${data.stats.map(stat => `${stat.stat.name}: ${stat.base_stat}`).join(', ')}</p>
+                        <p>Order: ${data.order}</p>
+                        <p>Abilities: ${data.abilities.map(ability => ability.ability.name).join(', ')}</p>
                     `);
                 })
                 .catch(error => {

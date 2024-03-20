@@ -1,7 +1,5 @@
-/* styles.css */
-
 body {
-    background-image: url('images/vines.jpg'); /* Adjusted path */
+    background-image: url('../images/vines.jpg'); 
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -11,6 +9,7 @@ body {
     margin: 0;
 }
 
+
 #pokemonInfo {
     text-align: center;
     color: #222;
@@ -19,5 +18,18 @@ body {
 #pokemonInfo p {
     font-weight: bold;
     text-decoration: underline;
-    color: red;
+    color: white;
 }
+#fetchDataBtn {
+					background-color: red;
+					color: white;
+					border: none;
+					padding: 10px 20px;
+					cursor: pointer;
+					font-size: 16px;
+					border-radius: 5px;
+			}
+
+			#fetchDataBtn:hover {
+					background-color: darkred;
+			}
